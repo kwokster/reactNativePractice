@@ -1,17 +1,47 @@
 import React from 'react';
-import { View, Text, StyleSheet, Button } from 'react-native';
+import { Text, StyleSheet, View, Button, TouchableOpacity } from 'react-native';
+import { createAppContainer } from 'react-navigation';
+import { createStackNavigator } from 'react-navigation-stack';
 
 const HomeScreen = ({ navigation }) => {
   return (
     <View>
-      <Text style={{ fontSize: 30 }}>HomeScreen</Text>
-      <Button title="Layout" onPress={() => navigation.navigate('Layout')} />
+      <Text style={styles.text}>4GL App</Text>
+      <Button
+        title="Go to SM3 demo"
+        onPress={() => navigation.navigate('Components')}
+      />
+      <Button
+        title="Go to List demo"
+        onPress={() => navigation.navigate('List')}
+      />
+      <Button
+        title="Go to Image demo"
+        onPress={() => navigation.navigate('Image')}
+      />
+      <Button
+        title="Go to Counter demo"
+        onPress={() => navigation.navigate('Counter')}
+      />
+      <Button
+        title="Go to Color demo"
+        onPress={() => navigation.navigate('Color')}
+      />
+      <Button
+        title="Go to square demo"
+        onPress={() => navigation.navigate('Square')}
+      />
+      {/* <TouchableOpacity onPress={() => props.navigation.navigate('List')}>
+        <Text>Go to list demo</Text>
+      </TouchableOpacity> */}
     </View>
   );
 };
 
-HomeScreen.navigationOptions = {
-  title: 'Home'
-};
+const styles = StyleSheet.create({
+  text: {
+    fontSize: 45
+  }
+});
 
 export default HomeScreen;

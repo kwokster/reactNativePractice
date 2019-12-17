@@ -1,0 +1,8 @@
+Reducers:
+- Function that gets called with 2 objects.
+- Argument #1: object that has all of our state in it.
+- Argument #2: object that describes the update we want to make.
+- We look at argument #2 and use it to decide how to change argument #1.
+- 2 technicalities: 
+    (1) We never change argument #1 directly. 
+    (2) We must always return a value to be used as Argument #1 (eg: state)
