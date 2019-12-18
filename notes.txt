@@ -6,3 +6,5 @@ Reducers:
 - 2 technicalities: 
     (1) We never change argument #1 directly. 
     (2) We must always return a value to be used as Argument #1 (eg: state)
+- type: String that describes the exact change operation we want to make.
+- payload: Some data that is critical to the change operation.
