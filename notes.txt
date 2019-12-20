@@ -8,3 +8,20 @@ Reducers:
     (2) We must always return a value to be used as Argument #1 (eg: state)
 - type: String that describes the exact change operation we want to make.
 - payload: Some data that is critical to the change operation.
+
+Layout:
+- Box object model
+- Flex Box
+ - Default: alignItems: 'stretch' (stretchs and takes up as much horizontal space as possible)
+  - Flex direction (default is column), justify content...default is flex-start (controls how children lay themselves out)
+ - Parent: alignItems, justifyContent, flexDirection || Child: flex, alignSelf
+    - flex makes a child in a parent try to take up as much space as possible. Go to flex values lesson for more info.
+    - alignSelf overrides the child element alignment
+- Position
+    - position: 'relative' is default
+    - absolute; ignored by sibling elements but adheres to parent flex instructions
+- top, bottom, left, right
+    - shifts it that direction, overlapping the other element if there are any
+- Anytime we want an element to fill up its container
+    - set element to absolute (ignores sibling elements), set top, left, bottom, right as 0.
+    - or ...StyleSheet.absoluteFillObject
